@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo(a) ao Nosso Site!</title>
+    <meta name="description" content="Página de boas-vindas do nosso incrível site. Descubra o que temos para oferecer!">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        main {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Para o main ocupar o espaço restante */
+        }
+
+        .welcome-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .lead {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .call-to-action {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button.primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .button.primary:hover {
+            background-color: #0056b3;
+        }
+
+        .button.secondary {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .button.secondary:hover {
+            background-color: #e0e0e0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.8em;
+        }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            .call-to-action {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .welcome-section {
+                padding: 30px;
+            }
+        }
+
+        /* Animação Sutil (Opcional) */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logotipo da Empresa">
+        <h1>Bem-vindo(a) à [Nome da Sua Marca/Projeto]!</h1>
+    </header>
+    <main>
+        <section class="welcome-section fade-in">
+            <p class="lead">Estamos muito felizes em recebê-lo(a) em nosso espaço.</p>
+            <p>Aqui você encontrará [breve descrição do que o site oferece].</p>
+            <div class="call-to-action">
+                <a href="/pagina-principal" class="button primary">Descubra Mais</a>
+                <a href="/sobre-nos" class="button secondary">Sobre Nós</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 [Nome da Sua Marca/Projeto]. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // script.js (Exemplo de animação sutil - agora inline)
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeSection = document.querySelector('.welcome-section');
+            if (welcomeSection) {
+                welcomeSection.classList.add('fade-in'); // Adicionar classe para animação CSS
+            }
+        });
+    </script>
+</body>
+</html>

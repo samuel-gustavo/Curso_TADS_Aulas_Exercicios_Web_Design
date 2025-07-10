@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Meu Aplicativo</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com o menu -->
+    <div th:replace="fragments/header :: cabecalho"></div>
+
+    <main class="container">
+        <h2>Bem-vindo ao Nosso Site!</h2>
+        <p>Esta é a página principal do nosso aplicativo. Sinta-se à vontade para navegar pelos nossos serviços e produtos usando o menu acima.</p>
+
+        <section class="featured-content">
+            <h3>Nossos Destaques</h3>
+            <div class="card">
+                <h4>Produto Incrível 1</h4>
+                <p>Descubra as funcionalidades e benefícios exclusivos deste produto que vai revolucionar seu dia a dia.</p>
+                <a href="/produtos/produto1" class="btn">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h4>Serviço Essencial</h4>
+                <p>Oferecemos soluções personalizadas para atender às suas necessidades com excelência e qualidade.</p>
+                <a href="/servicos/servico-essencial" class="btn">Conheça</a>
+            </div>
+        </section>
+
+        <section class="about-us-preview">
+            <h3>Sobre Nós</h3>
+            <p>Somos uma empresa dedicada a oferecer as melhores soluções para você. Com anos de experiência no mercado, nossa prioridade é a sua satisfação.</p>
+            <a href="/sobre" class="btn btn-secondary">Leia Mais Sobre Nós</a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <div th:replace="fragments/footer :: rodape"></div>
+
+</body>
+</html>

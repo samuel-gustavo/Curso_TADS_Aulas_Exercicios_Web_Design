@@ -1,0 +1,17 @@
+<!-- src/main/resources/templates/fragments/menu.html -->
+<nav th:fragment="menuPrincipal">
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/produtos}">Produtos</a></li>
+        <li><a th:href="@{/servicos}">Serviços</a></li>
+        <li><a th:href="@{/contato}">Contato</a></li>
+        <li th:if="${#authentication.principal}"><a th:href="@{/perfil}">Meu Perfil</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Mais</a>
+            <div class="dropdown-content">
+                <a th:href="@{/sobre}">Sobre Nós</a>
+                <a th:href="@{/faq}">FAQ</a>
+            </div>
+        </li>
+    </ul>
+</nav>
