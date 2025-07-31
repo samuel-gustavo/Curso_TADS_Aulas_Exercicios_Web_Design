@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#mensagem {
+    margin: 0;
+    font-size: 280px;
+    color: red;
+    transition: opacity 0.5s ease;
+    /* animation: piscar 2s infinite; */
+}

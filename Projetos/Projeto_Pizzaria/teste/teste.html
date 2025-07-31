@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste CSS</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <div class="header">
+        <h1 id="mensagem"></h1>
+    </div>
+    <script>
+
+        const frase = "Tudo é uma Questão de Pespectiva!";
+        const palavras = frase.split(" ");
+        const div = document.getElementById("mensagem");
+
+        let index = 0;
+
+        function mostrarPalavra() {
+            div.style.opacity = 0;
+
+            setTimeout(() => {
+                if (index < palavras.length) {
+                    div.innerHTML = palavras[index];
+                    div.style.opacity = 1;
+                    index++;
+                    setTimeout(mostrarPalavra, 1000); // espera 1s para próxima palavra
+                } else {
+                    // Quando terminar as palavras, mostrar a imagem
+                    div.style.opacity = 0;
+                    setTimeout(() => {
+                        div.style.display = "flex";
+                        div.style.justifyContent = "center";
+                        div.style.alignItems = "center";
+                        div.style.height = "100%"; // ou altura fixa que quiser
+                        div.innerHTML = '<img src="../assets/final.png" alt="Imagem final" style="height: auto;">';
+                        div.style.opacity = 1;
+
+                        // Agora, faz a imagem desaparecer após 3 segundos (3000 ms)
+                        setTimeout(() => {
+                            div.style.opacity = 0;
+                            // Se quiser, pode limpar o conteúdo depois do fade
+                            setTimeout(() => {
+                                div.innerHTML = '';
+                            }, 1000); // esperar a transição sumir (1s)
+                        }, 3000);
+
+                    }, 100);
+                }
+            }, 300);
+        }
+
+        mostrarPalavra();
+    </script>
+    <!-- <script>
+        const frase = "Tudo é uma Questão de Pespectiva";
+        const palavras = frase.split(" ");
+        const div = document.getElementById("mensagem");
+
+        let index = 0;
+
+        function mostrarPalavra() {
+            div.style.opacity = 0;
+
+            setTimeout(() => {
+                div.innerHTML = palavras[index];
+                div.style.opacity = 1;
+
+                index = (index + 1) % palavras.length; // volta ao início se quiser repetir
+                setTimeout(mostrarPalavra, 1000); // tempo entre cada palavra
+            }, 300); // tempo de apagar
+        }
+
+        mostrarPalavra();
+    </script> -->
+</body>
+</html>

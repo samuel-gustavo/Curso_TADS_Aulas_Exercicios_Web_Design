@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, monospace;
+
+    background-image: url(../assets/imagem_background_cadastro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+   
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Alinhamento Horizontal */
+    justify-content: center; /* Alinhamento Vertical */
+}
+
+#painel-login {
+    width: 450px;
+    height: 500px;
+
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.7); /* Cortorno */
+    background-color: rgba(0.5); /* Cor transparente com opacidade */
+    backdrop-filter: blur(5000px); /* deixa o fundo borrado */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form, h1 {
+    position: relative;
+    top: -25px;
+}
+
+h1 {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+#painel-login label {
+    position: relative;
+    top: -33px;
+    left: 4px;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+
+#painel-login input {
+    width: 95%;
+    border: none;
+    border-bottom: 3px solid white;
+    background: transparent;
+    padding: 8px 10px 8px 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: white;
+}
+
+#painel-login input:focus {
+    border-bottom-color: #108d4a;
+}
+
+#painel-login input:focus + label,
+#painel-login input:not(:placeholder-shown) + label {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+#painel-login img {
+    position: relative;
+    left: 220px;
+    bottom: 30px;
+    width: 18px;
+    height: 20px;
+    opacity: 0.7;
+}
+
+#painel-login #btn-cadastro {
+    width: 100%;
+    height: 40px;
+
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: 30px;
+    border-radius: 35px;
+    border: none;
+    font-size: 18px;
+}

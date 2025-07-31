@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Tela de Inicio</title>
+</head>
+<body>
+    <div>
+        <button id="segredo">Segredo!!!</button>
+        <a href="login.html" id="voltar"><button>Voltar</button></a>
+    </div>
+
+    <script>
+        const botao = document.getElementById('segredo');
+
+        botao.addEventListener('mouseenter', () => {
+        document.body.classList.add('bg-fundo');
+        });
+
+        botao.addEventListener('mouseleave', () => {
+        document.body.classList.remove('bg-fundo');
+        });
+    </script>
+</body>
+</html>
