@@ -26,7 +26,7 @@
                     div.innerHTML = palavras[index];
                     div.style.opacity = 1;
                     index++;
-                    setTimeout(mostrarPalavra, 1000); // espera 1s para próxima palavra
+                    setTimeout(mostrarPalavra, 1000); // espera 1 segundo para próxima palavra
                 } else {
                     // Quando terminar as palavras, mostrar a imagem
                     div.style.opacity = 0;
@@ -35,7 +35,7 @@
                         div.style.justifyContent = "center";
                         div.style.alignItems = "center";
                         div.style.height = "100%"; // ou altura fixa que quiser
-                        div.innerHTML = '<img src="../assets/final.png" alt="Imagem final" style="height: auto;">';
+                        div.innerHTML = '<img src="" alt="Imagem final" style="height: auto;">';
                         div.style.opacity = 1;
 
                         // Agora, faz a imagem desaparecer após 3 segundos (3000 ms)
